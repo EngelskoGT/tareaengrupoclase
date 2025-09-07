@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const API_URL = "/api/encuestas";
+  const API_URL = "/api";
   let encuestaID = 1;
 
   const surveyTitle = document.getElementById("survey-title");
