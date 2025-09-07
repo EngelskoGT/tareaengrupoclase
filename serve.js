@@ -24,6 +24,8 @@ app.use(cors());
 app.get("/encuestas/:tipo", EncuestaController.obtenerEncuesta);
 app.get("/encuestas/resumen/:id", RESUMENENCUESTACONTROLLER.resumenEncuesta);
 app.post("/encuestas/respuestas", RESPUESTASUSUARIOCONTROLLER.guardar);
-app.listen(3000, () => {
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log("✅ Servidor corriendo en el puerto", port);
   console.log("✅ Servidor corriendo en http://localhost:3000");
 });
