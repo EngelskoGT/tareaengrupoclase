@@ -22,9 +22,9 @@ app.use(cors());
 })();
 
 // Rutas de encuestas
-app.get("/encuestas/:tipo", EncuestaController.obtenerEncuesta);
-app.get("/encuestas/resumen/:id", RESUMENENCUESTACONTROLLER.resumenEncuesta);
-app.post("/encuestas/respuestas", RESPUESTASUSUARIOCONTROLLER.guardar);
+app.get("/api/encuestas/:tipo", EncuestaController.obtenerEncuesta);
+app.get("/api/encuestas/resumen/:id", RESUMENENCUESTACONTROLLER.resumenEncuesta);
+app.post("/api/encuestas/respuestas", RESPUESTASUSUARIOCONTROLLER.guardar);
 
 // Exporta la aplicación para que Vercel la ejecute
 module.exports = app;
