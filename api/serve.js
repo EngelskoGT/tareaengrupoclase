@@ -1,9 +1,9 @@
 const express = require("express");
-const EncuestaController = require("./backend/controladores/obtenerEncuestaController");
+const EncuestaController = require("../backend/controladores/obtenerEncuestaController");
 const cors = require("cors");
-const RESPUESTASUSUARIOCONTROLLER = require("./backend/controladores/respuestasUsuarioController");
-const RESUMENENCUESTACONTROLLER = require("./backend/controladores/resumenEncuestaController");
-const {getConnection} = require('./connect')
+const RESPUESTASUSUARIOCONTROLLER = require("../backend/controladores/respuestasUsuarioController");
+const RESUMENENCUESTACONTROLLER = require("../backend/controladores/resumenEncuestaController");
+const {getConnection} = require('../connect')
 
 const app = express();
 app.use(express.json());
