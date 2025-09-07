@@ -1,0 +1,123 @@
+/* Importación de la fuente de Google */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* ============================ */
+/* ESTILOS DE LA APLICACIÓN     */
+/* ============================ */
+:root{
+  /* Paleta de Colores y Variables */
+  --hero-bg: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+  --body-bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --text-color: #212529;
+  --border-color: rgba(0,0,0,.08);
+  --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
+  --shadow-md: 0 .5rem 1rem rgba(0,0,0,.15);
+  --border-radius-sm: .5rem;
+  --border-radius-md: .8rem;
+  --border-radius-lg: 1rem;
+  --primary-accent: rgba(13,110,253,.1);
+  --primary-border: rgba(13,110,253,.35);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--body-bg);
+  color: var(--text-color);
+}
+
+.app-hero{
+  background: var(--hero-bg);
+  color: #fff;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease-in-out;
+}
+.app-hero:hover{
+  transform: translateY(-5px);
+}
+
+.question-card{
+  border-radius: var(--border-radius-md);
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.question-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.option-pill{
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  padding: .8rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, transform 0.1s ease;
+}
+.option-pill:hover{
+  background: var(--primary-accent);
+  border-color: var(--primary-border);
+  transform: translateX(5px);
+}
+
+.option-pill input:checked + span {
+    font-weight: 700;
+    color: var(--bs-primary);
+}
+.option-pill input:checked ~ * {
+    color: var(--bs-primary);
+}
+.form-check-input:focus{
+    box-shadow: 0 0 0 .25rem var(--primary-accent);
+}
+.option-pill:has(:checked) {
+    border-color: var(--bs-primary);
+    background-color: var(--primary-accent);
+}
+
+.stat-badge{
+  font-variant-numeric: tabular-nums;
+  font-size: .8rem;
+}
+.emoji{
+  font-size: 1.5rem;
+  line-height: 1;
+  opacity: 0.8;
+}
+.small-muted{
+  font-size: .9rem;
+  color: var(--bs-secondary-color);
+}
+.sticky-actions{
+  position: sticky;
+  bottom: 0;
+  background: var(--card-bg);
+  padding: .75rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  box-shadow: 0 -4px 12px rgba(0,0,0,.05);
+  border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+  margin: 0 -1.5rem -1.5rem -1.5rem;
+}
+.required-asterisk{ color: var(--bs-danger); }
+
+.nav-tabs .nav-link{
+  border-radius: .5rem .5rem 0 0;
+}
+.nav-tabs .nav-link.active{
+    font-weight: bold;
+    background-color: var(--card-bg);
+    border-color: var(--border-color) var(--border-color) var(--card-bg);
+}
+
+.progress-bar {
+    animation: progress-animation 2s ease-out;
+}
+
+@keyframes progress-animation {
+    from { width: 0; }
+}
