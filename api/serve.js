@@ -28,3 +28,6 @@ app.post("/encuestas/respuestas", RESPUESTASUSUARIOCONTROLLER.guardar);
 
 // Exporta la aplicación para que Vercel la ejecute
 module.exports = app;
+
+// Esta es la exportación por defecto que Vercel a veces necesita
+export default app;
